@@ -19,3 +19,4 @@ sizes=[320,480,960,1366,1936]
 for size in sizes:
     browser.set_window_size(size,1056)
     sleep(3)
+print(3)
