@@ -29,12 +29,11 @@ browser.execute_script(
     const shitty = arguments[0];
     shitty.parentElement.removeChild(shitty)
     """,shitty_element)
-# shitty_element.screenshot("shitty.png")
-# search_results=browser.find_elements_by_class_name("g")
-# for index, search_result in enumerate(search_results):
-#     class_name=search_result.get_attribute("class")
-    # if "g-blk" not in class_name:
-    #     search_result.screenshot(f"screenshots/{KEYWORD}x{index}.png")
+search_results=browser.find_elements_by_class_name("g")
+for index, search_result in enumerate(search_results):
+    class_name=search_result.get_attribute("class")
+    if "g-blk" not in class_name:
+        search_result.screenshot(f"screenshots/{KEYWORD}x{index}.png")
 
 sleep(200000)
 browser.quit()
